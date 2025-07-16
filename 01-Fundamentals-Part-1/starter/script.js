@@ -46,10 +46,10 @@ console.log(typeof year)
 let age = 30;    //value here can be changed or mutated
 age = 31;
 
-const birthYear = 1991; // we cannot be changed or mutated 
+const birthYear = 1991; // we cannot be changed or mutated
 
 // const job; //cont can't be blank
-// Best to use const always to avoid bugs or errors. 
+// Best to use const always to avoid bugs or errors.
 
 var job = "Programmer";  //never use var
 job = "Coder";
@@ -125,4 +125,103 @@ if (birthYear <= 2000) {
 }
 
 console.log(century)
+
+//Type conversion and coercion
+
+const inputYear = '1991';
+console.log(inputYear)
+console.log(inputYear + 18)
+console.log(Number(inputYear) + 18)
+//Type cohersion
+console.log("I am " + 23 + " Years old");
+console.log('23' - '10');
+
+let n = '1' + 1;
+n = n - 1
+
+console.log(n)
+
+
+// if there is minus it will convert it to number
+
+
+
+//Truthy and Falsy Values
+
+// 5 falsy values are - 0, ' ' , undefined, null, NaN
+
+console.log(Boolean(0))
+console.log(Boolean(undefined))
+console.log(Boolean(NaN))
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+
+
+// When using logical operators and if else condition
+
+const money = 0;
+
+if (money) {
+    console.log("Don't spent it all")
+} else {
+    console.log('You should get a job')
+}
+
+
+let height = 1;
+// let height = 0;
+if (height) {
+    console.log('Yay! Height is defined')
+} else {
+    console.log('Height is not defined')
+}
+
+// Equality operators
+
+const age = 18; //assignment operator
+
+
+if (age === 18) {
+    console.log('You become an adult (strinct)')  //strict equality
+}
+if (age == 18) {
+    console.log('You become an adult (loose)') //loose equality
+}
+
+const fav = Number(prompt("What's your favourite number?"));
+console.log(fav, typeof (fav)) //it will return string usually untill wrap it by Number
+
+if (fav === 23) {
+    console.log("Yaa!! 23 is a cool number")
+} else if (fav === 7) {
+    console.log("7 is also a cool bnumber")
+} else {
+    console.log('Number is not 7 or 23')
+}
+
+if (fav !== 23) {
+    console.log("Why not 23")
+}
+
+
+
+// Boolean logic : AND, OR nad Not
+
+const hasDriverLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverLicense && hasGoodVision)
+console.log(hasDriverLicense || hasGoodVision)
+console.log(!hasDriverLicense)
+
+// const shouldDrive = hasDriverLicense && hasGoodVision;
+
+if (hasDriverLicense && hasGoodVision) {
+    console.log("Sarah is good to drive")
+} else {
+    console.log("Someone else should drive")
+}
+
+const isTired = true
+
 */
