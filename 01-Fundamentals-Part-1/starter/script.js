@@ -224,4 +224,41 @@ if (hasDriverLicense && hasGoodVision) {
 
 const isTired = true
 
+
+
+//The switch statement - Break statement is important
+
+const day = 'Tuesday';
+
+switch (day) {
+    case 'Monday':
+        console.log('Today is Monday');
+        break;
+    case 'Tuesday':
+        console.log('Today is Tuesday');
+        break;
+}
+
+
+//Statement vs Expression
+
+//Expression produce values
+
+//Statement is some sentances that form a complete sentance/
+
+//for a template literal we can only put strings
+
+//Conditional ternary operator
+
+const age = 23;
+// age >= 18 ? console.log('I love to take driving classes') : console.log('You are not allowwed');
+
+
+const drink = age >= 18 ? 'Wine ' : 'Water';
+console.log(drink)
+
+//we can use it when js need an expression under a condition-- best palce to use a ternary operator
+
 */
+
+//JS Version Releases - ES6
