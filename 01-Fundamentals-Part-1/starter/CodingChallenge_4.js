@@ -27,20 +27,16 @@ const bill = 275;
 
 //Task1
 
-// if (bill >= 50 && bill <= 300) {
-//     console.log(bill)
-//     tip = bill * (15 / 100);
-//     console.log(tip)
-//     final_bill = bill + tip;
-//     console.log(final_bill)
-// } else {
-//     console.log(bill);
-//     tip = bill * (20 / 100);
-//     console.log(tip)
-//     final_bill = bill + tip;
-//     console.log(final_bill)
+if (bill >= 50 && bill <= 300) {
+    tip = bill * (15 / 100);
+    final_bill = bill + tip;
+    console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
+} else {
+    tip = bill * (20 / 100);
+    final_bill = bill + tip;
+    console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
 
-// }
+}
 
 const tip = bill <= 300 && bill >= 50 ? bill * .15 : bill * .2;
 
