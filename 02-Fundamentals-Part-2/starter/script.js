@@ -83,4 +83,78 @@ function foodProcessor(orange, apple) {
 
 console.log(foodProcessor(5, 4))
 
+
+
+//Arrays in JS
+
+const friend1 = 'Micheal';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+console.log(friends)
+
+const years1 = new Array(1991, 1984, 2008, 2020);  //using array function - new keyword
+
+console.log(friends[0])
+
+// friends = ['bob', 'alice']
+
+
+const jonas = ['Kaysarul', 'Anas', 2037 - 1991, 'student', friends];
+console.log(jonas)
+
+//exercise 
+
+const calage = function (birthYear) {
+    return 2025 - birthYear;
+}
+
+const years = [1990, 1968, 1779, 2018];
+const age1 = calage(years[1])
+const age2 = calage(years[0])
+const age3 = calage(years[years.length - 1])
+
+const ages = [age1, age2, age3]
+console.log(ages)
+
+
+//array operations
+
+const friends = ['Micheal', 'Steven', 'Peter'];
+friends.push('Jay'); //add arrays at the end- return length
+console.log(friends);
+
+friends.unshift('John') //add elements to the start - returns length
+console.log(friends);
+
+
+//Remove elements
+
+const popped = friends.pop(); //remove items from the end
+console.log(friends)
+console.log(popped)  //the items that is removed returned by pop
+friends.pop();
+console.log(friends)
+
+const shifted = friends.shift()  //remove items from front - opposite of unshift
+console.log(friends)
+console.log(shifted) //returns the shifted item
+
+//index of
+console.log(friends.indexOf('Steven'))
+console.log(friends.indexOf('Bob'))
+//includes
+console.log(friends.includes('Steven'))
+console.log(friends.includes('bob'))
+
+
+friends.push('Peter')
+
+if (friends.includes('Peter')) {
+    console.log('You havea a friend Peter')
+}
+
 */
+
