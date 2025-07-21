@@ -12,7 +12,6 @@ Create a calcBMI method on each object to calculate the BMI (the same method on 
 
 Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
 
-
 */
 
 const mark = {
@@ -35,11 +34,12 @@ const john = {
     }
 }
 
-mark.calcBMI()
-john.calcBMI()
+mark.calcBMI();//method here doesn't call itself - have to be called explicitly
+john.calcBMI();
 
 if (mark.bmi > john.bmi) {
     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`)
 } else {
     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`)
 }
+

@@ -105,7 +105,7 @@ console.log(friends[0])
 const jonas = ['Kaysarul', 'Anas', 2037 - 1991, 'student', friends];
 console.log(jonas)
 
-//exercise 
+//exercise
 
 const calage = function (birthYear) {
     return 2025 - birthYear;
@@ -200,7 +200,7 @@ if (anasob[interstedIn]) {
 //Multiple dot notation to get numbers of friend
 console.log(` ${anasob.fName} has ${anasob.friends.length} friends, his best friend is ${anasob.friends[1]}`)
 
-//Object method 
+//Object method
 
 const anasob = {
     fName: 'Kaysarul',
@@ -228,3 +228,27 @@ const anasob = {
 console.log(anasob.getSummary());
 console.log(anasob.age)
 */
+
+//Loops
+
+//For loops keep running untill the condition is True
+
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`Lifting Weights Repition ${i}`)
+// }
+
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+// ];
+// const types = [];
+
+// for (let i = 0; i < jonasArray.length; i++) {
+//     console.log(jonasArray[i], typeof jonasArray[i]);
+//     // Filling a new array
+//     types.push(typeof jonasArray[i]);
+// }
+// // console.log(types);
