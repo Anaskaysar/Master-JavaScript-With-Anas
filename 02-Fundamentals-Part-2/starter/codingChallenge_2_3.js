@@ -20,7 +20,7 @@ const mark = {
     mass: 78,
     height: 1.69,
     calcBMI: function () {
-        this.bmi = this.mass / (this.height * 2);
+        this.bmi = this.mass / (this.height * this.height);
         return this.bmi;
     },
 }
@@ -30,7 +30,7 @@ const john = {
     mass: 92,
     height: 1.95,
     calcBMI: function () {
-        this.bmi = this.mass / (this.height * 2)
+        this.bmi = this.mass / (this.height * this.height)
         return this.bmi;
     }
 }
