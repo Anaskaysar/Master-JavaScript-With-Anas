@@ -156,5 +156,75 @@ if (friends.includes('Peter')) {
     console.log('You havea a friend Peter')
 }
 
-*/
 
+
+//Object - Just like arrays - order doesn't matter at all here for array it's different
+
+const anasArray = [
+    'Anas',
+    'Kaysar',
+    2037 - 1991,
+    'student',
+    ['KB', 'Bro', 'Apurba']
+]
+
+
+const anasob = {
+    fName: 'Kaysarul',
+    lName: 'Anas',
+    age: 2037 - 1991,
+    prof: 'Student',
+    friends: ['KB', 'Bro', 'Apurba']
+}
+
+// console.log(anasob.age);
+// console.log(anasob['fname'])
+
+
+// const namekey = 'Name';
+// console.log(anasob['f' + namekey]);
+// console.log(anasob['l' + namekey]);
+
+const interstedIn = prompt("What do you want to know, fName, lName, age, prof, friends")
+// console.log(anasob.interstedIn) //undefined as there is no property called Intersted
+
+if (anasob[interstedIn]) {
+    console.log(anasob[interstedIn])
+} else {
+    console.log('Wrong request! Choose between  fName, lName, age, prof, friends')
+}
+
+
+//Challenge
+//"Jonas has 3 friends, his best friend is called Micheal"
+//Multiple dot notation to get numbers of friend
+console.log(` ${anasob.fName} has ${anasob.friends.length} friends, his best friend is ${anasob.friends[1]}`)
+
+//Object method 
+
+const anasob = {
+    fName: 'Kaysarul',
+    lName: 'Anas',
+    birthYear: 1997,
+    prof: 'Student',
+    friends: ['KB', 'Bro', 'Apurba'],
+    hasDriversLicense: true,
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // } //method - any function that is attached to an object.
+    // calcAge: function () {
+    //     console.log(this) //object calling the method
+    //     return 2037 - this.birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2037 - this.birthYear //object calling the method
+        return this.age;
+    },
+    //Challenge Write a method with to get summary : Jonas is a 46-Year old teacher, and he has a drivers license //arays are also object just an special kind of object
+    getSummary: function () {
+        return `${this.fName} is a ${this.calcAge()}-year old ${this.prof} and he has ${this.hasDriversLicense ? 'a' : 'No'} drivers license `
+    }
+}
+console.log(anasob.getSummary());
+console.log(anasob.age)
+*/
