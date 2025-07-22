@@ -27,6 +27,10 @@ Welcome to my JavaScript learning repository! This repo documents my hands-on jo
 
 - ✅ Challenges: `codingChallenge_2_1.js` to `codingChallenge_2_4.js`
 
+### `03-Developer-Skills`
+
+> Advanced concepts: Prettier, To-do highligher, Live Server, .
+
 ### `LeetCode Practices`
 
 > Focused on algorithms and data structures.
