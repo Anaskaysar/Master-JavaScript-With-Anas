@@ -76,18 +76,109 @@ const temperature2 = [-7, -2, -6, -2, 'error', 9, , 17, 15, 14, 8, 5];
 
 //Fixing Bugs
 
-const measureInKelvin = function () {
-    const measurement = {
-        type: 'temp',
-        unit: 'celcius',
-        value: prompt("Degree Celsius: ")
+// const measureInKelvin = function () {
+//     const measurement = {
+//         type: 'temp',
+//         unit: 'celcius',
+//         value: prompt("Degree Celsius: ")
+//     }
+//     // console.log(measurement.value)
+//     // console.warn(measurement.value)
+//     // console.error(measurement.value)
+//     console.table(measurement)
+//     const kelvin = measurement.value + 275;
+//     return kelvin;
+// }
+
+// console.log(measureInKelvin())
+
+
+// Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+const t1 = [17, 21, 23];
+const t2 = [12, 5, -5, 0, 4];
+
+// Understandding the problesm
+//- Array transformed to string, separated by ...
+// - What is the X days? it's Anas: index+1
+
+
+//Breaking up intro sub-problems
+//- Transforom each element to string with C
+//- String needs to contain day (index+1) 
+// Add ... between elements and start and end of string
+// Log string to console
+
+
+
+// const paintForecase = function (arr) {
+//     let str = '';
+//     for (let i = 0; i < arr.length; i++) {
+//         str = str + `${arr[i]}ºC in ${i + 1} days ...`;
+//     }
+//     console.log('... ' + str);
+// }
+
+// paintForecase(t1);
+// paintForecase(t2);
+
+///////////////////////////////////////
+// Coding Challenge #2 With AI
+
+/*
+Let's say you're building a time tracking application for freelancers. At some point in building this app, you need a function that receives daily work hours for a certain week, and returns:
+1. Total hours worked
+2. Average daily hours
+3. The day with the most hours worked
+4. Number of days worked
+5. Whether the week was full-time (worked 35 hours or more)
+
+TEST DATA: [7.5, 8, 6.5, 0, 8.5, 4, 0]
+*/
+
+const testDATA = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+
+const totalHoursworked = function (arr) {
+    //Improvement suggested by ChatGPT - Important for all kinds of problem solving
+    if (arr.length === 0) {
+        console.log("No data provided.");
+        return;
     }
-    // console.log(measurement.value)
-    // console.warn(measurement.value)
-    // console.error(measurement.value)
-    console.table(measurement)
-    const kelvin = measurement.value + 275;
-    return kelvin;
+
+
+    // let avg = 1; - Improvement suggested by ChatGPT - avg default value = 1 is unnecessary – just compute after loop.
+    let sum = 0;
+    let maxDailyhours = arr[0];
+    let maxDayIndex = 0;
+    let numberofDaysWorked = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+        if (arr[i] > maxDailyhours) {
+            maxDailyhours = arr[i];
+            maxDayIndex = i;
+
+        }
+        if (arr[i] !== 0) {
+            numberofDaysWorked += 1;
+        }
+    }
+    let avg = sum / arr.length;
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    console.log('1. Total hours Worked: ' + sum);
+    console.log('2. Avg Daily Hours: ' + avg);
+    console.log('3. The day with the most hours worked: ' + days[maxDayIndex] + `(${maxDailyhours} hrs)`);
+    console.log('4. Number of days worked ' + numberofDaysWorked);
+    console.log("5. " + (sum >= 35 ? "Full Time" : "Not Full Time")); //By ChatGPT
+
+    //By Me
+    // if (sum < 35) {
+    //     console.log('5. Not Full Time')
+    // } else {
+    //     console.log("5. Full Time")
+    // }
+
 }
 
-console.log(measureInKelvin())
+totalHoursworked(testDATA);
